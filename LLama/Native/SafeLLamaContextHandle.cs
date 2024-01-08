@@ -215,6 +215,7 @@ namespace LLama.Native
                 {
                     // the entire `eval` system needs replacing with the new batch system!
                     var ret = NativeApi.llama_eval(this, pinned, tokens.Length, n_past);
+                    Console.WriteLine($"[DEBUGGING]: ret == {ret}");
                     return ret == 0;
                 }
             }
